@@ -3,19 +3,23 @@ This Python 3.4 script is an attempt to build a dictionary of uniform metadata f
 The goal is to test possible methods for creating a subject-based tool for researchers and also to test the reliability of the metadata obtained in using digital repository APIs and by scraping web sites. The metadata is relatively reliable, but not perfect, especially dates.
 
 RESOURCES QUERIED
+
 The Digital Public Library of America (DPLA)
 Calisphere (images only)
 The California State Parks Museum Collections
 
 PRIMARY FILES PRODUCED
+
 A JSON dictionary with normalized metadata for each object;
 A raw webpage (HTML) sorted by date to troubleshoot the proper download of metadata and thumbnails;
 A file of subject terms collected including a count of the objects where the term appears.
 
 SECONDARY FILE PRODUCED
+
 A running file that dumps metadata for an object once processed. This is to assist in troubleshooting problem areas when running the script.
 
 WHAT YOU NEED TO RUN THIS CODE
+
 A Python interpreter (Python 3.4)
 An API key for DPLA
 All the Python modules in the import line (except ‘my_file’)
@@ -25,6 +29,7 @@ The resulting page with contextualizing information and additional style formatt
 http://pfch.nyc/quipu/project.html
 
 HOW THIS CODE CAN BE REPURPOSED MEANINGFULLY
+
 This code is specifically written for the subject Chinese Exclusion Act. It may work for another subject, however, if you would like to use this script to begin creating a dictionary for your own subject, you will definitely need to change certain parts of this script:
 
 1. Delete or comment out any lines that pertain to the California State Parks website.
