@@ -1,4 +1,4 @@
-This Python 3.4 script is an attempt to build a simple viewer for primary sources on a single subject. It queries resources in digital archives and special collections to retrieve metadata. It also downloads the thumbnails and URLS for the resources. This code is written to specifically find materials on the Chinese Exclusion Act.
+This Python 3.4 script is an attempt to build a simple web page of primary sources for a single subject. It queries resources in digital archives and special collections to retrieve metadata. It also downloads the thumbnails and URLS for the resources. This code is written to specifically find materials on the Chinese Exclusion Act.
 
 The goal is to test possible methods for creating a subject-based tool for researchers and also to test the reliability of the metadata obtained in using digital repository APIs and by scraping web sites. The metadata is relatively reliable, but not perfect, especially dates.
 
@@ -25,7 +25,7 @@ The resulting page with contextualizing information and additional style formatt
 http://pfch.nyc/quipu/project.html
 
 HOW THIS CODE CAN BE REPURPOSED MEANINGFULLY<br>
-This code is specifically written for the subject Chinese Exclusion Act. It may work for another subject, however, if you would like to use this script to begin creating a dictionary for your own subject, you will definitely need to change certain parts of this script:
+This code is specifically written for the subject Chinese Exclusion Act. It may work for another subject, however, if you would like to use this script to begin finding resources and collecting metadata/thumbnails for your own subject, you will definitely need to change certain parts of this script:
 
 <ul>
 <li>Delete or comment out any lines that pertain to the California State Parks website.</li>
