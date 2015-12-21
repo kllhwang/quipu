@@ -1,4 +1,4 @@
-This Python 3.4 script is an attempt to build a dictionary of uniform metadata for primary sources on a single subject. It queries resources in digital archives and special collections to retrieve metadata. It also downloads the thumbnails and URLS for the resources. This code is written to specially find materials on the Chinese Exclusion Act.
+This Python 3.4 script is an attempt to build a simple viewer for primary sources on a single subject. It queries resources in digital archives and special collections to retrieve metadata. It also downloads the thumbnails and URLS for the resources. This code is written to specifically find materials on the Chinese Exclusion Act.
 
 The goal is to test possible methods for creating a subject-based tool for researchers and also to test the reliability of the metadata obtained in using digital repository APIs and by scraping web sites. The metadata is relatively reliable, but not perfect, especially dates.
 
@@ -27,18 +27,21 @@ http://pfch.nyc/quipu/project.html
 HOW THIS CODE CAN BE REPURPOSED MEANINGFULLY<br>
 This code is specifically written for the subject Chinese Exclusion Act. It may work for another subject, however, if you would like to use this script to begin creating a dictionary for your own subject, you will definitely need to change certain parts of this script:
 
-1. Delete or comment out any lines that pertain to the California State Parks website.<br>
-2. For DPLA, you will need to insert your API key and change the API query to reflect your subject instead of ‘Chinese Exclusion Act’ in the following lines, as follows:
+<ul>
+<li>Delete or comment out any lines that pertain to the California State Parks website.</li>
+<li>For DPLA, you will need to insert your API key and change the API query to reflect your subject instead of ‘Chinese Exclusion Act’ in the following lines, as follows:<br><br>
 
-payload = {'q': ‘your+subject+phrase+here’, 'page_size': 10000,  'api_key': ‘your_API_key_here’ }<br>
-dpla = requests.get('http://api.dp.la/v2/items', params=payload)
+<i>{'q': ‘your+subject+phrase+here’, 'page_size': 10000,  'api_key': ‘your_API_key_here’ }</i><br>
+	<i>dpla = requests.get('http://api.dp.la/v2/items', params=payload)</i>
+</li><br>
+<li>For Calisphere, you will need to replace ‘Chinese Exclusion Act’ with your subject in the following line, as follows:<br><br>
 
-3. For Calisphere, you will need to replace ‘Chinese Exclusion Act’ with your subject in the following line, as follows:
-
-calisphere = requests.get('http://content.cdlib.org/search?facet=type-tab&relation=calisphere.universityofcalifornia.edu&style=cui&keyword=your+subject+here&x=0&y=0&rmode=json')
+<i>calisphere = requests.get('http://content.cdlib.org/search?facet=type-tab&relation=calisphere.universityofcalifornia.edu&style=cui&keyword=your+subject+here&x=0&y=0&rmode=json')</i>
+</li>
+</ul>
 
 *** Code and metadata should be checked, if you plan to use it ***<br>
 *** DPLA is constantly expanding its base of content providers, which will effect the ability of this script to retrieve all metadata ***
 
-README last updated: 1/26/2015
+README last updated: 12/21/2015
  
