@@ -29,12 +29,12 @@ This code is specifically written for the subject Chinese Exclusion Act. It may 
 
 <ul>
 <li>Delete or comment out any lines that pertain to the California State Parks website.</li>
-<li>For DPLA, you will need to insert your API key and change the API query to reflect your subject instead of ‘Chinese Exclusion Act’ in the following lines, as follows:<br><br>
+<li>For DPLA, you will need to insert your API key and change the API query to reflect your subject instead of ‘Chinese Exclusion Act’ in the following lines, as indicated:<br><br>
 
 <i>{'q': ‘your+subject+phrase+here’, 'page_size': 10000,  'api_key': ‘your_API_key_here’ }</i><br>
 	<i>dpla = requests.get('http://api.dp.la/v2/items', params=payload)</i>
 </li><br>
-<li>For Calisphere, you will need to replace ‘Chinese Exclusion Act’ with your subject in the following line, as follows:<br><br>
+<li>For Calisphere, you will need to replace ‘Chinese Exclusion Act’ with your subject in the following line, as indicated:<br><br>
 
 <i>calisphere = requests.get('http://content.cdlib.org/search?facet=type-tab&relation=calisphere.universityofcalifornia.edu&style=cui&keyword=your+subject+here&x=0&y=0&rmode=json')</i>
 </li>
